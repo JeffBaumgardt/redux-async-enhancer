@@ -46,7 +46,7 @@ store.injectReducer('reducerName', (state = {}, action) => {
 I got this idea from [Dan Abramov's](https://twitter.com/dan_abramov) answer to a [Stack Overflow Question](https://stackoverflow.com/questions/32968016/how-to-dynamically-load-reducers-for-code-splitting-in-a-redux-application/33044701#33044701) about dynamically loading reducers for code splitting.
 
 ## Other Solutions
-None that I know ok. Please [make a pull request](http://makeapullrequest.com) and add it.
+None that I know of. Please [make a pull request](http://makeapullrequest.com) and add it.
 
 ## License
 MIT
