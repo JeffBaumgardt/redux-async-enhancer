@@ -24,7 +24,8 @@
   },
   "homepage": "https://github.com/JeffBaumgardt/redux-async-enhancer#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0"
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0"
   },
   "dependencies": {},
   "peerDependencies": {
