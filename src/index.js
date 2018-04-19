@@ -10,13 +10,14 @@ export function asyncStoreEnhancer() {
 		})
 	}
 
-	return (next) => (reducers, initialState, enchancer) => {
+	return next => (reducers, initialState, enchancer) => {
 		const store = next(reducers, initialState, enchancer)
 
-		function injectReducer(key, reducer) {
-			if (!store.asyncReducers[key]) {
-				store.asyncReducers[key] = reducer
-				store.replaceReducer(makeRootReducer(reducers, store.asyncReducers))
+		function injectReducer(nextStore, key, reducer) {
+			if (!nextStore.asyncReducers[key]) {
+				nextStore.asyncReducers[key] = reducer
+				nextStore.replaceReducer(makeRootReducer(reducers, nextStore.asyncReducers))
+				console.log('this store', nextStore)
 			}
 		}
 
