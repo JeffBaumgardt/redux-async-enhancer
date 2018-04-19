@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux'
 
-export function asyncStoreEnhancer() {
-	let asyncReducers = {}
+let asyncReducers = {}
+export function asyncStoreEnhancer(initReducers) {
 
-	const makeRootReducer = (reducers, asyncReducers) => {
+	const makeRootReducer = (asyncReducers) => {
 		return combineReducers({
-			...reducers,
+			...initReducers,
 			...asyncReducers
 		})
 	}
@@ -13,11 +13,10 @@ export function asyncStoreEnhancer() {
 	return next => (reducers, initialState, enchancer) => {
 		const store = next(reducers, initialState, enchancer)
 
-		function injectReducer(nextStore, key, reducer) {
-			if (!nextStore.asyncReducers[key]) {
-				nextStore.asyncReducers[key] = reducer
-				nextStore.replaceReducer(makeRootReducer(reducers, nextStore.asyncReducers))
-				console.log('this store', nextStore)
+		function injectReducer(key, reducer) {
+			if (!asyncReducers[key]) {
+				asyncReducers[key] = reducer
+				store.replaceReducer(makeRootReducer(asyncReducers))
 			}
 		}
 
