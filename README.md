@@ -22,7 +22,6 @@ npm install --save redux-async-enhancer
 ## Usage
 The `asyncStoreEnhancer` store enhancer is added onto `createStore`. The enhancer needs the root reducers as an argument. Reducers are added once per key and cached after that.
 ```javascript
-//
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux'
 import { asyncStoreEnhancer } from 'redux-async-enhancer'
 import reducers from './reducers'
