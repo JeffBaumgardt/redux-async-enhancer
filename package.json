@@ -4,8 +4,7 @@
   "description": "Store enhancer for https://github.com/reactjs/redux which allows asynchronously inject reducers.",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel src --out-dir lib",
-    "flow": "flow src"
+    "build": "babel src --out-dir lib"
   },
   "repository": {
     "type": "git",
@@ -26,9 +25,7 @@
   "homepage": "https://github.com/JeffBaumgardt/redux-async-enhancer#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-plugin-transform-flow-strip-types": "^6.22.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "flow-bin": "^0.70.0"
+    "babel-plugin-transform-object-rest-spread": "^6.26.0"
   },
   "dependencies": {},
   "peerDependencies": {

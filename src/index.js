@@ -1,18 +1,15 @@
-// @flow
-
 import { combineReducers } from 'redux'
-import type { Reducer, StoreEnhancer } from 'redux'
 
 let asyncReducers = {}
-export function asyncStoreEnhancer<S, A, D>(initReducers: ?Object) {
-	const makeRootReducer = (asyncReducers: Object) => {
+export function asyncStoreEnhancer(initReducers) {
+	const makeRootReducer = asyncReducers => {
 		return combineReducers({
 			...initReducers,
 			...asyncReducers
 		})
 	}
 
-	return (next: function) => (reducers: Reducer<S, A>, initialState: S, enchancer: StoreEnhancer<S, A, D>) => {
+	return next => (reducers, initialState, enchancer) => {
 		const store = next(reducers, initialState, enchancer)
 
 		function injectReducer(key, reducer) {
