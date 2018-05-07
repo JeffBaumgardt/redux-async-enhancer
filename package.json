@@ -1,6 +1,6 @@
 {
   "name": "redux-async-enhancer",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Store enhancer for https://github.com/reactjs/redux which allows asynchronously inject reducers.",
   "main": "lib/index.js",
   "scripts": {
