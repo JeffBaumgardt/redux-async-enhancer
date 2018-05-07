@@ -35,6 +35,14 @@ const enhancer = compose(
 
 const store = createStore(rootReducer, initialState, enhancer)
 
+
+export default store
+
+// elsewhere
+
+
+import store from 'create-store' // Or whereever you have it, perhaps from react-redux context?
+
 // inject a reducer
 store.injectReducer('reducerName', (state = {}, action) => {
   // reducer
