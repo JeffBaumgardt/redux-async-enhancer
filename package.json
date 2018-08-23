@@ -1,35 +1,35 @@
 {
-  "name": "redux-async-enhancer",
-  "version": "0.3.0",
-  "description": "Store enhancer for https://github.com/reactjs/redux which allows asynchronously inject reducers.",
-  "main": "lib/index.js",
-  "scripts": {
-    "build": "babel src --out-dir lib"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JeffBaumgardt/redux-async-enhancer"
-  },
-  "keywords": [
-    "asyncReducers",
-    "async-enhancer",
-    "redux",
-    "store",
-    "enhancer"
-  ],
-  "author": "Jeff Baumgardt (jeff@bugfoot.net)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/JeffBaumgardt/redux-async-enhancer/issues"
-  },
-  "homepage": "https://github.com/JeffBaumgardt/redux-async-enhancer#readme",
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1"
-  },
-  "dependencies": {},
-  "peerDependencies": {
-    "redux": "^3.7.2"
-  }
+	"name": "redux-async-enhancer",
+	"version": "1.0.0",
+	"description": "Store enhancer for https://github.com/reactjs/redux which allows asynchronously inject reducers.",
+	"main": "lib/index.js",
+	"scripts": {
+		"build": "babel src --out-dir lib"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/JeffBaumgardt/redux-async-enhancer"
+	},
+	"keywords": [
+		"asyncReducers",
+		"async-enhancer",
+		"redux",
+		"store",
+		"enhancer"
+	],
+	"author": "Jeff Baumgardt (jeff@bugfoot.net)",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/JeffBaumgardt/redux-async-enhancer/issues"
+	},
+	"homepage": "https://github.com/JeffBaumgardt/redux-async-enhancer#readme",
+	"devDependencies": {
+		"babel-cli": "^6.26.0",
+		"babel-plugin-transform-object-rest-spread": "^6.26.0",
+		"babel-preset-env": "^1.6.1"
+	},
+	"dependencies": {},
+	"peerDependencies": {
+		"redux": "^3.7.2"
+	}
 }

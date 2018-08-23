@@ -1,11 +1,11 @@
-import { combineReducers } from 'redux'
+import {combineReducers} from 'redux'
 
 let asyncReducers = {}
 export function asyncStoreEnhancer(initReducers) {
 	const makeRootReducer = asyncReducers => {
 		return combineReducers({
 			...initReducers,
-			...asyncReducers
+			...asyncReducers,
 		})
 	}
 
@@ -16,14 +16,14 @@ export function asyncStoreEnhancer(initReducers) {
 			if (!asyncReducers[key]) {
 				asyncReducers[key] = reducer
 				store.replaceReducer(makeRootReducer(asyncReducers))
-				store.dispatch({ type: '@@redux-async-enhancer/injectReducer' })
+				store.dispatch({type: `@@redux-async-enhancer/injectReducer/${key}`})
 			}
 		}
 
 		return {
 			...store,
 			injectReducer,
-			asyncReducers
+			asyncReducers,
 		}
 	}
 }
